@@ -1,0 +1,120 @@
+<html>
+  <head>
+  	<title>Ethereum State Explorer</title>
+  	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  	<style>
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+  	  body, * {
+  	  	font-family: "Avenir Next", "Roboto", sans-serif;
+  	  	outline: 0;
+  	  }
+  	  body {
+  	  	margin: 30px;
+  	  }
+  	  h1, h2 {
+  	  	text-align: center;
+  	  	font-size: 40px;
+  	  	margin-bottom: 20px;
+  	  }
+  	  h2 {
+  	  	font-size: 20px;
+  	  }
+  	  input, select, button {
+  	  	height: 40px;
+  	  	width: 80%;
+  	  	display: block;
+  	  	margin: 10px auto;
+  	  	padding: 5px;
+  	  	padding-left: 8px;
+  	  	padding-right: 8px;
+  	  	font-size: 20px;
+  	  	border: 1px #CCCCCC solid;
+  	  	transition: border-color 0.5s;
+  	  }
+  	  
+  	  input:hover {
+  	  	border: 1px #E11232 solid;
+  	  }
+  	  
+  	  button {
+  	  	background: white;
+  	  	border: 1px #123366 solid;
+  	  	padding: 5px;
+  	  	cursor: pointer;
+  	  	transition: border-color 0.5s;
+  	  }
+  	  
+  	  #btn:hover {
+  	  	border: 1px #3366E1 solid;
+  	  }
+  	  
+  	  #value {
+  	  	text-align: center;
+  	  }
+  	</style>
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  	<script src="web3-import.js"></script>
+  	<script src="main.js"></script>
+  </head>
+  <body>
+    <h1>Ethereum Storage Explorer</h1>
+    <select id="network">
+	  <option value="mainnet">Main Network</option>
+	  <option value="rinkeby">Rinkeby Network</option>
+	  <option value="kovan">Kovan Network</option>
+	  <option value="ropsten">Ropsten Network</option>
+	</select>
+    <input id="address" type="text" placeholder="address (e.g. 0x1a5af05f0aa152be51e8d22720ba7a6aff8ae157)" />
+    <input id="key" type="text" placeholder="key (e.g. 0x0)" />
+    <button id="btn">Get value</button>
+    <br>
+    <h1>&darr;</h1>
+    <div id="value"></div>
+  </body>
+</html>
