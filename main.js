@@ -13,6 +13,7 @@ $(function () {
     let addr = $("#address").val()
     let key = $("#key").val()
     let web3 = getWeb3For($("#network").val())
+    $("#value").text("")
     web3.eth.getStorageAt(addr, key).then(function (ret) {
       $("#value").text(ret)
     }).catch(function () {

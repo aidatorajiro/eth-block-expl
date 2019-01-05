@@ -51,7 +51,7 @@ border-collapse: collapse;
 border-spacing: 0;
 }
   	  body, * {
-  	  	font-family: "Avenir Next", "Roboto", sans-serif;
+  	  	font-family: "Avenir", "Roboto", sans-serif;
   	  	outline: 0;
   	  }
   	  body {
@@ -97,6 +97,18 @@ border-spacing: 0;
   	  #value {
   	  	text-align: center;
   	  }
+  	  
+  	  #desc {
+  	      text-align:center;
+  	      margin: 30px;
+  	      margin-top: 100px;
+  	      border-top: 1px #749264 solid;
+  	      border-bottom: 1px #749264 solid;
+  	      padding-top: 30px;
+  	      padding-bottom: 30px;
+  	      padding-left: 20px;
+  	      padding-right: 20px;
+  	  }
   	</style>
   	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
   	<script src="web3-import.js"></script>
@@ -116,5 +128,9 @@ border-spacing: 0;
     <br>
     <h1>&darr;</h1>
     <div id="value"></div>
+    
+    <div id="desc">
+      How Ethereum works: Ethereum consists of distributed key-value stores which can be used by smart contracts. Normally, we access information of smart contracts by calling their interface functions, however, we can also obtain their data by reading Ethereum's Distributed Hash Table directly. In this website, you can lookup Ethereum DHT contents from address and key.
+    </div>
   </body>
 </html>
